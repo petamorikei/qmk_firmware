@@ -75,16 +75,37 @@
 #    define BLUETOOTH_NKRO_ENABLE
 
 /* Raw hid command for factory test and bluetooth DFU */
-#   define RAW_HID_CMD 0xAA ... 0xAB
+#    define RAW_HID_CMD 0xAA ... 0xAB
 #else
 /* Raw hid command for factory test */
-#   define RAW_HID_CMD 0xAB
+#    define RAW_HID_CMD 0xAB
 #endif
 
 /* Emulated EEPROM configuration */
 #define FEE_DENSITY_BYTES FEE_PAGE_SIZE
-#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR  2047
+#define DYNAMIC_KEYMAP_EEPROM_MAX_ADDR 2047
 
 /* Factory test keys */
 #define FN_KEY1 MO(1)
 #define FN_KEY2 MO(3)
+
+// Custom mouse keys config
+#define MK_3_SPEED
+#define MK_MOMENTARY_ACCEL
+// #define MK_C_OFFSET_0 1
+// #define MK_C_INTERVAL_0 32
+#define MK_C_OFFSET_1 8
+#define MK_C_INTERVAL_1 4
+#define MK_C_OFFSET_UNMOD 24
+#define MK_C_INTERVAL_UNMOD 4
+#define MK_C_OFFSET_2 72
+#define MK_C_INTERVAL_2 4
+
+// #define MK_W_OFFSET_0 1
+// #define MK_W_INTERVAL_0 360
+#define MK_W_OFFSET_1 1
+#define MK_W_INTERVAL_1 100
+#define MK_W_OFFSET_UNMOD 1
+#define MK_W_INTERVAL_UNMOD 60
+#define MK_W_OFFSET_2 1
+#define MK_W_INTERVAL_2 20
