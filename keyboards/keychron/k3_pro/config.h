@@ -24,8 +24,7 @@
 #define LED_DISABLE_WHEN_USB_SUSPENDED
 
 /* DIP switch for Mac/win OS switch */
-#define DIP_SWITCH_PINS \
-    { A8 }
+#define DIP_SWITCH_PINS {A8}
 
 /* Caps lock LED Pin */
 #define LED_CAPS_LOCK_PIN A0
@@ -54,19 +53,16 @@
 
 #    define HOST_DEVICES_COUNT 3
 
-#    define HOST_LED_PIN_LIST \
-        { H3, H3, H3 }
+#    define HOST_LED_PIN_LIST {H3, H3, H3}
 #    define HOST_LED_PIN_ON_STATE 1
 
 #    if defined(RGB_MATRIX_ENABLE) || defined(LED_MATRIX_ENABLE)
 
 #        define LED_DRIVER_SHUTDOWN_PIN C14
 
-#        define HOST_LED_MATRIX_LIST \
-            { 17, 18, 19 }
+#        define HOST_LED_MATRIX_LIST {17, 18, 19}
 
-#        define BAT_LEVEL_LED_LIST \
-            { 17, 18, 19, 20, 21, 22, 23, 24, 25, 26 }
+#        define BAT_LEVEL_LED_LIST {17, 18, 19, 20, 21, 22, 23, 24, 25, 26}
 
 /* Backlit disable timeout when keyboard is disconnected(unit: second) */
 #        define DISCONNECTED_BACKLIGHT_DISABLE_TIMEOUT 40
@@ -96,3 +92,25 @@
 /* Factory test keys */
 #define FN_KEY1 MO(1)
 #define FN_KEY2 MO(3)
+
+// Custom mouse keys config
+// Ref: https://docs.qmk.fm/features/mouse_keys
+#define MK_3_SPEED // Enable constant cursor speeds
+#define MK_MOMENTARY_ACCEL
+// #define MK_C_OFFSET_0 1
+// #define MK_C_INTERVAL_0 3
+#define MK_C_OFFSET_1 3
+#define MK_C_INTERVAL_1 4
+#define MK_C_OFFSET_UNMOD 10
+#define MK_C_INTERVAL_UNMOD 4
+#define MK_C_OFFSET_2 24
+#define MK_C_INTERVAL_2 4
+
+// #define MK_W_OFFSET_0 1
+// #define MK_W_INTERVAL_0 360
+#define MK_W_OFFSET_1 1
+#define MK_W_INTERVAL_1 120
+#define MK_W_OFFSET_UNMOD 1
+#define MK_W_INTERVAL_UNMOD 72
+#define MK_W_OFFSET_2 1
+#define MK_W_INTERVAL_2 30
